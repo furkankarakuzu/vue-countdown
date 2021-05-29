@@ -1,0 +1,68 @@
+<div>
+  <canvas v-show="isCompleted" style="position: absolute; top:0; left:0;" id="canvas" key="canvas"></canvas>
+  <img src="../../assets/logo.png" alt="vue.js logo" width="40" height="40" />
+  <h1 style="display:inline-block">
+    ueCountdown
+  </h1>
+  <div class="counter-container">
+    <template v-if="!isActive">
+      <div class="counter">
+        <div class="time-digit">
+          <div class="number-input">
+            <input class="quantity" min="0" v-model="time.days" type="number">
+          </div>
+        </div>
+        <div class="time-text">Gün</div>
+      </div>
+      
+      <div class="counter">
+        <div class="time-digit">
+          <div class="number-input">
+            <input class="quantity" min="0" max="24" v-model="time.hours" type="number">
+          </div>
+        </div>
+        <div class="time-text">Saat</div>
+      </div>
+      
+      <div class="counter">
+        <div class="time-digit">
+          <div class="number-input">
+            <input class="quantity" min="0" max="60" v-model="time.minutes" type="number">
+          </div>
+        </div>
+        <div class="time-text">Dakika</div>
+      </div>
+      
+      <div class="counter">
+        <div class="time-digit">
+          <div class="number-input">
+            <input class="quantity" min="0" max="60" v-model="time.seconds" type="number">
+          </div>
+        </div>
+        <div class="time-text">Saniye</div>
+      </div>
+      <button class="start-button" type="button" @click="startCountdown()">Başlat!</button>
+    </template>
+    <template v-else="isActive">
+      <div class="counter">
+        <div class="time-digit">{{time.days}}</div>
+        <div class="time-text">Gün</div>
+      </div>
+      
+      <div class="counter">
+        <div class="time-digit">{{time.hours}}</div>
+        <div class="time-text">Saat</div>
+      </div>
+      
+      <div class="counter">
+        <div class="time-digit">{{time.minutes}}</div>
+        <div class="time-text">Dakika</div>
+      </div>
+      
+      <div class="counter">
+        <div class="time-digit">{{time.seconds}}</div>
+        <div class="time-text">Saniye</div>
+      </div>
+    </template>
+  </div>
+</div>

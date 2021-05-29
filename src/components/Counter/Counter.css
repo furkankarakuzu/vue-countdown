@@ -1,0 +1,62 @@
+.counter {
+  display: inline-flex;
+  flex-direction: column;
+  margin: 1.5rem;
+}
+
+.time-digit {
+  color: rgb(65, 65, 65);
+  font-size: 3rem;
+  font-weight: 600;
+  margin: 20px;
+  text-align: center;
+}
+
+.time-text {
+  color: rgb(17, 56, 22);
+  font-size: 2rem;
+  font-weight: 700;
+  margin: 10 0;
+  text-align: center;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+}
+
+.number-input,
+.number-input * {
+  box-sizing: border-box;
+}
+
+.number-input input[type="number"] {
+  font-family: sans-serif;
+  max-width: 5rem;
+  padding: 0.5rem;
+  border: none;
+  border-width: 0 2px;
+  font-size: 2rem;
+  height: 3rem;
+  font-weight: bold;
+  text-align: center;
+  color: #41b883;
+}
+
+.start-button {
+  display: block;
+  margin: 10px auto;
+  width: 50%;
+  height: 50px;
+  cursor: pointer;
+  background-color: #41b883;
+  border: 0;
+  border-radius: 50px;
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: white;
+}
+
+.start-button:hover {
+  background-color: #25af71;
+}
